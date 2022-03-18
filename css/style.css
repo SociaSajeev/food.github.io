@@ -1,0 +1,645 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/* reset everything */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* styling body element */
+body
+{
+    min-height: 1000px;
+}
+
+/* styling the banner section */
+.banner
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.5)), url('../images/banner_food1.jpg');
+
+    /* background: url('../images/banner_food1.jpg'); */
+    background-size: cover;
+}
+
+/* styling the text over banner */
+.banner .content{
+    width: 900px;
+    text-align: center;
+}
+.banner .content h2{
+    font-size: 5em;
+    color: #fff;
+}
+.banner .content p{
+    font-size: 1em;
+    color: #fff;
+}
+/* .banner .content i{
+    font-size: 100px;
+    text-align: left;
+    color: #ff0157;
+} */
+.btn{
+    font-size: 1em;
+    color: #fff;
+    background-color: #ff0157;
+    border: none;
+    padding: 10px 10px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+.btn:hover{
+    letter-spacing: 6px;
+}
+
+/* styling the header section starts here*/
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header.sticky
+{
+    background: #fff;
+    padding: 10px 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+header .logo
+{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 2em;
+}
+header.sticky .logo
+{
+    color: black;
+    font-size: 20px;
+}
+
+header.sticky .openMenu{
+    display: none;
+}
+
+
+header .logo span
+{
+    color: #ff0157;
+}
+
+header .openMenu{
+    display: none;
+}
+
+header .closeMenuIcon{
+    display: none;
+}
+header .navigation
+{
+    position: relative;
+    list-style: none;
+    display: flex;
+}
+header .navigation li
+{
+    margin-left: 30px;
+}
+header .navigation li a
+{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+}
+header .navigation li a:hover
+{
+    color: #ff0157;
+}
+header.sticky .navigation li a
+{
+    color: black;
+}
+header.sticky .navigation li a:hover
+{
+    color: #ff0157;
+}
+
+/* styling the header section ends here*/
+
+/* styling the about section starts here */
+section
+{
+    padding: 100px;
+}
+.row
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.row .col50
+{
+    position: relative;
+    width: 48%;
+}
+.titletext
+{
+    color: #111;
+    font-size: 2em;
+    font-weight: 300;
+}
+.titletext span
+{
+    color: #ff0157;
+    font-size: 1.5em;
+    font-weight:500;
+}
+.row .col50 .imgBx
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.row .col50 .imgBx img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* styling the about section ends here */
+
+/* styling the menu section starts here */
+.title
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.content
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+.menu .content .box
+{
+    width: calc(100% / 3 - 40px);
+    /* width: 310px; */
+    margin: 20px;
+    border: 15px solid #fff;
+    box-shadow: 0 5px 35px rgba(0,0,0,0.08);
+    position: relative;
+}
+.imgBx
+{
+    width: 100%;
+    height: 300px;
+}
+.imgBx img
+{
+    width: 100%;
+    height: 100% ;
+    object-fit: cover;
+}
+
+.box .text
+{
+    position: absolute;
+    top: 0%;left: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(51,51,51,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: scale(0);
+}
+.box .text h3
+{
+    color: #fff;
+    font-weight: 400;
+    padding: 20px 0;
+}
+
+
+.box .text button
+{
+    padding: 5px 10px;
+    border-radius: 50px;
+    border: none;
+    background: #ff0157;
+    color: #fff;
+}
+.box .text button:hover
+{
+    background: #fff;
+    color: #ff0157;
+    transition: .3s;
+}
+.box:hover .text
+{
+    transform: scale(1);
+}
+/* styling the menu section ends here */
+
+/* styling the expert section starts here */
+.expert .content .box
+{
+    width: 220px;
+    margin: 10px;
+    border: 15px solid #fff;
+    box-shadow: 0 5px 35px rgba(0,0,0,0.08);
+}
+.expert .content .box .name h3
+{
+    font-size: 16px;
+    font-weight: 500;
+}
+/* styling the expert section ends here */
+
+/* styling the testimonials section starts here */
+.testimonials
+{
+    background: url('../images/banner_food3.jpg');
+    background-size: cover;
+}
+.white .titletext , .white p
+{
+    color: #fff;
+}
+.testimonials .content .box
+{
+    width: calc(100% / 3 - 40px);
+    margin: 20px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 5px 35px rgba(0,0,0,0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.testimonials .content .box .name
+{
+    background: #fff;
+}
+.testimonials .content .box .imgBx
+{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 1px 0px 1px 0px rgba(0,0,0,0.5);
+
+}
+
+.testimonials .content .box .name
+{
+    text-align: center;
+}
+.testimonials .content .box .name p
+{
+    color: #666;
+    font-style: italic;
+}
+.testimonials .content .box .name h3
+{
+    margin-top: 20px;
+    font-size: 1em;
+    color: #ff0157;
+    font-weight: 400;
+}
+
+/* styling the testimonials section ends here */
+/* styling the contact section starts here */
+.contact
+{
+    background: url('../images/food4.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.contactform
+{
+    padding: 75px 50px;
+    margin-top: 20px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+    background: #fff;
+    width: 500px;
+}
+.contactform h3
+{
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #111;
+}
+.contactform .inputBox
+{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.contactform .inputBox input, textarea
+{
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #555;
+    color: #111;
+    outline: none;
+    font-size: 16px;
+    font-weight: 300;
+    resize: none;
+}
+.contactform .inputBox input[type="submit"]
+{
+    color: #fff;
+    background: #ff0157;
+    font-size: 1em;
+    max-width: 100px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+/* styling for contact section ends here */
+.copyrighttext
+{
+    text-align: center;
+    padding: 10px 40px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+.copyrighttext p
+{
+    color: #333;
+}
+.closeMenu,
+.openMenu
+{
+    display: none;
+}
+/* media query for large size */
+@media (max-width:1200px)
+{
+    .banner .content h2{
+        font-size: 4.5em;
+    }
+}
+
+/* media query for tab size*/
+@media (max-width:991px)
+{
+    header
+    {
+        padding: 10px 10px;
+    }
+    header .sticky
+    {
+        padding: 10px 10px;
+    }
+    header .openMenu{
+        display: block;
+        font-size: 20px;
+        color: #fff;
+    }
+    header.sticky .openMenu{
+        display: block;
+        color: #111;
+        font-size: 20px;
+    }
+
+    header .navigation{
+        display: none;
+    }
+
+    header .navigation.active
+    {
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #fff;
+        overflow: hidden;
+    }
+    header .navigation li a
+    {
+        color: black;
+        font-size: 1.6em;
+        font-weight: 300;
+    }
+
+    header .closeMenuIcon.active{
+        display: block;
+        position: absolute;
+        color: #111;
+        top: 10px;
+        right: 10px;
+    }
+
+    .banner{
+        height: auto;
+        padding-top: 80px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .banner .content h2{
+        font-size: 4em;
+    }
+}
+/* media query for smaller than tablet size */
+@media screen and (max-width:768px) {
+
+/* styling the header starts here */
+header
+{
+    padding: 10px 10px;
+}
+header .sticky
+{
+    padding: 10px 10px;
+}
+
+header .navigation.active
+{
+    top: 0px;
+}
+/* styling the text over banner starts here */
+.banner .content{
+    /* width: 400px; */
+    width: 100%;
+    text-align: center;
+}
+.banner .content h2{
+    font-size: 4em;
+    color: #fff;
+}
+.banner .content p{
+    font-size: 1em;
+    color: #fff;
+}
+.banner .content .btnMenu{
+    font-size: 14px;
+    color: #fff;
+    background-color: #ff0157;
+    border: none;
+    padding: 10px 10px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+.banner .content .btnMenu:hover{
+    letter-spacing: 6px;
+}
+/* styling the text over banner ends here */
+
+/* styling the about section starts here */
+section
+{
+    padding: 50px;
+}
+.row
+{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.row .col50
+{
+    width: 100%;
+}
+.titletext
+{
+    color: #111;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+.titletext span
+{
+    color: #ff0157;
+    font-size: 1.5em;
+    font-weight:500;
+}
+.row .col50 p{
+    font-size: 14px;
+}
+/* styling the about section ends here */
+
+/* styling the menu section starts here */
+
+.title p{
+    font-size: 14px;
+}
+.menu .content .box
+{
+    width: calc(100% / 2 - 40px);
+}
+.menu .content .box .text h3
+{
+    font-size: 16px;
+}
+/* styling the menu section ends here */
+
+/* styling the expert section starts here */
+.expert .content .box
+{
+    width: calc(100% / 2 - 40px);
+    margin: 10px;
+    border: 15px solid #fff;
+    box-shadow: 0 5px 35px rgba(0,0,0,0.08);
+}
+/* styling the expert section ends here */
+
+/* styling the testimonials section starts here */
+.testimonials .content .box
+{
+    width: 100%;
+}
+.testimonials .content .box .text
+{
+    background: #fff;
+}
+/* styling the testimonials section ends here */
+/* styling contact section */
+.contactform
+{
+    width: 100%;
+}
+.contactform h3
+{
+    font-size: 1em;
+}
+.contactform .inputBox input, textarea
+{
+    font-size: 14px;
+}
+.contactform .inputBox input[type="submit"]
+{
+    font-size: 14px;
+    font-weight: 300;
+}
+}
+
+/* media query for small devices */
+@media screen and (max-width:568px) {
+    .banner{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .banner .content
+    {
+        width: 300px;
+    }
+    .banner .content h2{
+        font-size: 40px;
+    }
+    .banner .content p{
+        font-size: 16px;
+    }
+    .btn{
+        font-size: 13px;
+    }
+/* styling the menu section starts here */
+
+    .menu .content .box
+    {
+        width: 100%;
+    }
+/* styling the menu section ends here */
+
+/* styling the expert section starts here */
+.expert .content .box
+{
+    width: 100%;
+}
+/* styling the expert section ends here */
+
+}
